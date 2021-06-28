@@ -9,6 +9,11 @@
       {{ count }}
       <button class="mx-1" type="button" @click="count++">＋</button>
     </div>
+    <div class="grid grid-cols-9 gap-4">
+      <div v-for="(grid) in xiang.grids()" :key="grid.index">
+        {{ grid.chi }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,6 +28,9 @@ export default defineComponent({
       type: String,
       required: true,
     },
+  },
+  mounted() {
+    this.xiang.start();
   },
   setup: () => {
     const count = ref(0);
