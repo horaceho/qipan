@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.0.5",
-    "xiang.js": "^0.0.9"
+    "xiang.js": "^0.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.3",
