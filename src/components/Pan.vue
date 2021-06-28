@@ -1,42 +1,30 @@
 <template>
-
-  <p>FEN <code>{{ fen }}</code></p>
-
-  <button type="button" @click="count++">{{ count }}</button>
-
+  <div class="">
+    <div>
+      <div class="font-medium text-black">FEN</div>
+      <p class="text-gray-500">{{ fen }}</p>
+    </div>
+    <div class="flex-shrink-0">
+      <button class="mx-1" type="button" @click="count++">＋</button>
+      {{ count }}
+      <button class="mx-1" type="button" @click="count--">－</button>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from "vue";
 export default defineComponent({
-  name: 'Pan',
+  name: "Pan",
   props: {
     fen: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   setup: () => {
-    const count = ref(0)
-    return { count }
-  }
-})
+    const count = ref(0);
+    return { count };
+  },
+});
 </script>
-
-<style scoped>
-a {
-  color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
-</style>
