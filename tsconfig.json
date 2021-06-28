@@ -4,6 +4,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "typeRoots": [
+      "src/typings",
+      "node_modules/@types"
+    ],
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
